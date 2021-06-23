@@ -9,9 +9,9 @@ public class AdapterTest {
     @Test
     public void itShouldExposeTheMeasurementServiceUsingTheAdapterPattern() {
 //        MeasurementService measurementService = new MeasurementServiceImpl();
-//        MetricMeasurementServiceAdapter structural.adapter = new MetricMeasurementServiceAdapterImpl(measurementService);
+//        MetricMeasurementServiceAdapter adapter = new MetricMeasurementServiceAdapterImpl(measurementService);
 //
-//        assertThat(structural.adapter.calculateRectangleCircumferenceInCm(10, 10)).isEqualTo(40);
-//        assertThat(structural.adapter.calculateRectangleSurfaceInCm(10, 10)).isEqualTo(100);
+//        assertThat(adapter.calculateRectangleCircumferenceInCm(10, 10)).isCloseTo(40, Offset.offset(0.1));
+//        assertThat(adapter.calculateRectangleSurfaceInCm(10, 10)).isCloseTo(100, Offset.offset(0.1));
     }
 }
