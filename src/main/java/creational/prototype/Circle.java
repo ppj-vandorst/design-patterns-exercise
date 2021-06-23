@@ -7,6 +7,10 @@ public class Circle implements Shape {
         this.diameterInPixels = diameterInPixels;
     }
 
+    public Circle(Circle circle) {
+        this.diameterInPixels = circle.diameterInPixels;
+    }
+
     // Getters
     public int getDiameterInPixels() {
         return diameterInPixels;
@@ -20,5 +24,10 @@ public class Circle implements Shape {
     @Override
     public double calculateCircumference() {
         return this.diameterInPixels * Math.PI;
+    }
+
+    @Override
+    public Shape clone() {
+        return new Circle(this);
     }
 }

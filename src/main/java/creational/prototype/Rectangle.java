@@ -9,6 +9,11 @@ public class Rectangle implements Shape {
         this.heightInPixels = heightInPixels;
     }
 
+    public Rectangle(Rectangle rectangle) {
+        this.widthInPixels = rectangle.widthInPixels;
+        this.heightInPixels = rectangle.heightInPixels;
+    }
+
     // Getters
     public int getWidthInPixels() {
         return widthInPixels;
@@ -30,5 +35,10 @@ public class Rectangle implements Shape {
     @Override
     public double calculateCircumference() {
         return (this.heightInPixels + this.widthInPixels) * 2;
+    }
+
+    @Override
+    public Shape clone() {
+        return new Rectangle(this);
     }
 }

@@ -2,11 +2,11 @@ package structural.adapter;
 
 public class MeasurementServiceImpl implements MeasurementService {
 
-    public double calculateRectangleCircumferenceInInches(int widthInInches, int heightInInches) {
+    public double calculateRectangleCircumferenceInInches(double widthInInches, double heightInInches) {
         return (widthInInches + heightInInches) * 2;
     }
 
-    public double calculateRectangleSurfaceInInches(int widthInInches, int heightInInches) {
+    public double calculateRectangleSurfaceInInches(double widthInInches, double heightInInches) {
         return widthInInches * heightInInches;
     }
 }

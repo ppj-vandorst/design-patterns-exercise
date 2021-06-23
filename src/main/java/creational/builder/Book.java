@@ -56,4 +56,36 @@ public class Book {
     public void setNumberOfPages(int numberOfPages) {
         this.numberOfPages = numberOfPages;
     }
+
+    static class Builder {
+        private String isbn;
+        private String title;
+        private String author;
+        private int yearOfRelease;
+        private int numberOfPages;
+
+        public Builder(String isbn, String title) {
+            this.isbn = isbn;
+            this.title = title;
+        }
+
+        public Builder withAuthor(String author) {
+            this.author = author;
+            return this;
+        }
+
+        public Builder withYearOfRelease(int yearOfRelease) {
+            this.yearOfRelease = yearOfRelease;
+            return this;
+        }
+
+        public Builder withNumberOfPages(int numberOfPages) {
+            this.numberOfPages = numberOfPages;
+            return this;
+        }
+
+        public Book build() {
+            return new Book(isbn, title, author, yearOfRelease, numberOfPages);
+        }
+    }
 }
