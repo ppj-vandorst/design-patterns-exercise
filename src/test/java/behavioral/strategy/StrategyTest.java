@@ -7,9 +7,9 @@ public class StrategyTest {
     @Test
     public void itShouldLogUsingTheStrategyPattern() {
 //        Logger logger = new Logger();
-//        LoggingStrategy behavioral.strategy = new ConsoleLoggingStrategy();
+//        LoggingStrategy strategy = new ConsoleLoggingStrategy();
 //
-//        logger.setStrategy(behavioral.strategy);
+//        logger.setStrategy(strategy);
 //
 //        logger.log("test message");
     }
