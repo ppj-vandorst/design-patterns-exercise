@@ -8,8 +8,8 @@ public class DecoratorTest {
 
     @Test
     public void itShouldBuildAFormatterUsingTheDecoratorPattern() {
-//        Formatter decoratedFormatter = new UnderscoreFormatter(new UpperCaseFormatter(new FormatterImpl()));
-//
-//        assertThat(decoratedFormatter.formatString("test 123 456")).isEqualTo("TEST_123_456");
+        Formatter decoratedFormatter = new UnderscoreFormatter(new UpperCaseFormatter(new FormatterImpl()));
+
+        assertThat(decoratedFormatter.formatString("test 123 456")).isEqualTo("TEST_123_456");
     }
 }

@@ -8,11 +8,11 @@ public class ProxyTest {
 
     @Test
     public void itShouldProxyTheExpensiveWeatherService() {
-//        WeatherService realService = new ExpensiveWeatherService();
-//        WeatherService proxyService = new CachedWeatherService(realService);
-//
-//        String prediction1 = proxyService.getTomorrowsWeatherPrediction("Rotterdam");
-//        String prediction2 = proxyService.getTomorrowsWeatherPrediction("Rotterdam");
-//        assertThat(prediction1).isEqualTo(prediction2);
+        WeatherService realService = new ExpensiveWeatherService();
+        WeatherService proxyService = new CachedWeatherService(realService);
+
+        String prediction1 = proxyService.getTomorrowsWeatherPrediction("Rotterdam");
+        String prediction2 = proxyService.getTomorrowsWeatherPrediction("Rotterdam");
+        assertThat(prediction1).isEqualTo(prediction2);
     }
 }
