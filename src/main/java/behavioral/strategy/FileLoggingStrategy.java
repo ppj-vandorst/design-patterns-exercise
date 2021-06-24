@@ -8,7 +8,7 @@ public class FileLoggingStrategy implements LoggingStrategy {
     @Override
     public void log(String message) {
         try {
-            FileWriter myWriter = new FileWriter("src/main/java/behavioral.strategy/log.txt");
+            FileWriter myWriter = new FileWriter("src/main/java/behavioral/strategy/log.txt");
             myWriter.write(message);
             myWriter.close();
         } catch (IOException e) {
