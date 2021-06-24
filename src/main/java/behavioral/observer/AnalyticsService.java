@@ -1,10 +1,10 @@
 package behavioral.observer;
 
-public class AnalyticsService implements InventoryObserver {
+public class AnalyticsService {
     private int numberOfEvents = 0;
 
-    @Override
-    public void notify(String productName, int inventory) {
+    // This method should be called when we I get notified by the inventoryService
+    private void applyAnalytics(String productName, int inventory) {
         System.out.printf("Inventory of product %s changed to %d", productName, inventory);
         numberOfEvents++;
     }
